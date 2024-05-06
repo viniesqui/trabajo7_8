@@ -1,13 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from sklearn.externals import joblib
+import joblib
 import numpy as np
 
 # Definir el modelo de entrada
 class InputData(BaseModel):
-    feature1: float
-    feature2: float
-    # Add more features here
+    Sales: float
+    TV: float
 
 app = FastAPI()
 
