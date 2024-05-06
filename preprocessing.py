@@ -1,14 +1,19 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.externals import joblib
+import joblib
 import pandas as pd
 
 # leer dataset 
-df = pd.read_csv('your_dataset.csv')
+'''
+El dataset es de cuantas ventas se generan como funcion del gasto en el mercadeo de television
+viene de https://www.kaggle.com/datasets/devzohaib/tvmarketingcsv/data
+y lo escogi porque es simple con solo dos columnas y es pequeño entonces se entrena rapido
+'''
+df = pd.read_csv('tvmarketing.csv')
 
 # quitar la columna de prediccion 
-X = df.drop('target_column', axis=1)
-y = df['target_column']
+X = df.drop('Sales', axis=1)
+y = df['Sales']
 
 # Splitear los datos
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
