@@ -7,7 +7,7 @@ import pandas as pd
 '''
 El dataset es de cuantas ventas se generan como funcion del gasto en el mercadeo de television
 viene de https://www.kaggle.com/datasets/devzohaib/tvmarketingcsv/data
-y lo escogi porque es simple con solo dos columnas y es pequeño entonces se entrena rapido
+y lo escogi porque es simple con solo dos columns y es pequeño entonces se entrena rapido
 '''
 df = pd.read_csv('tvmarketing.csv')
 
